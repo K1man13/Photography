@@ -1,2 +1,0 @@
-// removed
-module.exports = () => {};
