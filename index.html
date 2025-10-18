@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kimani Anthonio — Professional Photographer & Videographer based in Nairobi. Events, weddings, portraits, documentaries, and creative films.">
+  <meta name="keywords" content="photography, videography, Nairobi photographer, wedding photographer, documentary filmmaker, portrait photographer">
+  <meta property="og:title" content="Kimani Anthonio — Photography & Videography">
+  <meta property="og:description" content="Professional photography and videography services in Nairobi — events, weddings, portraits, documentaries, and creative films.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Kimani Anthonio">
+  <title>Kym Creates — Photography & Videography</title>
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --brand: #0ea5a4; }
+    .hidden-hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .hero-bg { background-image: url('https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd'); background-size: cover; background-position: center; }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 1000; align-items: center; justify-content: center; }
+    .lightbox img, .lightbox video { max-width: 92%; max-height: 86%; border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.7); }
+    .gallery-img { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .gallery-img:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
+    /* small-screen sticky nav spacing fix */
+    @media (max-width: 640px) { body { padding-top: 64px; } }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur z-40 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3">
+        <img src="kym (2).png" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+        <span class="font-semibold text-lg">Kym_Creates</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm">
+        <a href="#about" class="hover:text-teal-600">About</a>
+        <a href="#gallery" class="hover:text-teal-600">Portfolio</a>
+        <a href="#services" class="hover:text-teal-600">Services</a>
+        <a href="#testimonials" class="hover:text-teal-600">Testimonials</a>
+        <a href="#contact" class="text-white bg-teal-500 px-4 py-2 rounded-full hover:bg-teal-600">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden px-3 py-2 border rounded" aria-label="Toggle navigation">Menu</button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section aria-label="Intro" class="relative h-screen hero-bg flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+    <div class="relative container mx-auto px-4 text-white">
+      <div class="max-w-3xl py-28">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Capturing Life — One Frame at a Time</h1>
+        <p class="mt-4 text-lg md:text-xl">I’m Kimani , a Nairobi-based Photographer & Videographer. I craft images and films that connect, convince and convert — from weddings and events to documentaries and commercial work.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#gallery" class="px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200">View Portfolio</a>
+          <a href="#contact" class="px-6 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600">Book a Session</a>
+          <a href="Kimani Anthony Cv.pdf.pdf" class="px-6 py-3 border border-white/30 rounded-full hover:bg-white/10">View CV</a>
+        </div>
+        <p class="mt-6 text-sm opacity-80">Available for on-location work nationwide and international travel for select projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <img src="" alt="Kimani Anthonio" class="w-full md:w-1/3 rounded-lg shadow-lg mb-6 md:mb-0 md:mr-8">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg">I’m a Nairobi-based Photographer and Videographer specializing in events, portraits, documentaries, weddings, and creative film. With over five years of experience behind the lens, I combine artistry with storytelling — ensuring every project reflects emotion, culture, and connection.</p>
+        <p class="mt-4">My creative journey began in Kibera, where I discovered the power of visuals to inspire change. Since then, I’ve worked with organizations, brands, and individuals to produce compelling imagery that speaks louder than words.</p>
+        <h3 class="text-xl font-semibold mt-4">Core Skills</h3>
+        <ul class="list-disc list-inside mt-2 text-lg">
+          <li>Event & Wedding Coverage</li>
+          <li>Portrait Photography</li>
+          <li>Documentary Filmmaking</li>
+          <li>Street & Lifestyle Photography</li>
+          <li>Creative Video Editing & Color Grading</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Portfolio</h2>
+      <div class="flex items-center justify-center mb-6 space-x-3">
+        <button class="filter-btn px-4 py-2 rounded-full bg-teal-500 text-white" data-filter="all">All</button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-gray-800" data-filter="events">Events</button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-gray-800" data-filter="portraits">Portraits</button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-gray-800" data-filter="documentaries">Documentaries</button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-gray-800" data-filter="street">Street</button>
+        <button class="filter-btn px-4 py-2 rounded-full bg-white text-gray-800" data-filter="film">Film</button>
+      </div>
+
+      <!-- Events & Weddings -->
+      <h3 class="text-2xl font-semibold mb-4">Events & Weddings</h3>
+      <p class="mb-4">Every event tells a story — joy, laughter, and shared memories. My lens captures the raw emotions that make each celebration unique.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="gallery-grid">
+        <figure class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1516726817505-f5ed4e610f44" alt="Wedding Moment" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1516726817505-f5ed4e610f44" data-caption="Bride and groom candid moment" />
+          <figcaption class="mt-2 text-sm text-gray-600">Bride and groom candid moment — Events</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1518091043644-3f657c68003e" alt="Event Celebration" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1518091043644-3f657c68003e" data-caption="Celebration highlights" />
+          <figcaption class="mt-2 text-sm text-gray-600">Celebration highlights — Events</figcaption>
+        </figure>
+      </div>
+
+      <!-- Portraits -->
+      <h3 class="text-2xl font-semibold mb-4">Portraits</h3>
+      <p class="mb-4">Beyond faces, I capture personalities. Each portrait session reflects your essence — bold, calm, or expressive.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+        <figure class="gallery-item" data-category="portraits">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="City Portrait" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" data-caption="City portrait — editorial style" />
+          <figcaption class="mt-2 text-sm text-gray-600">City portrait — Portraits</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="portraits">
+          <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56" alt="Family Portrait" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56" data-caption="Family portrait session" />
+          <figcaption class="mt-2 text-sm text-gray-600">Family portrait session — Portraits</figcaption>
+        </figure>
+      </div>
+
+      <!-- Documentaries -->
+      <h3 class="text-2xl font-semibold mb-4">Documentaries</h3>
+      <p class="mb-4">Documenting real lives, real stories. I use visual narratives to highlight culture, community, and social impact.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+        <figure class="gallery-item" data-category="documentaries">
+          <img src="https://images.unsplash.com/photo-1518495973544-1c0b6498c8d3" alt="Documentary Shot" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1518495973544-1c0b6498c8d3" data-caption="Documentary portrait — community" />
+          <figcaption class="mt-2 text-sm text-gray-600">Documentary portrait — Documentaries</figcaption>
+        </figure>
+      </div>
+
+      <!-- Street Photography -->
+      <h3 class="text-2xl font-semibold mb-4">Street Photography</h3>
+      <p class="mb-4">Life unfolds in the streets — raw, colorful, and unpredictable. My street work focuses on everyday moments that define urban life.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+        <figure class="gallery-item" data-category="street">
+          <img src="https://images.unsplash.com/photo-1500622944204-b135684e99fd" alt="Street Scene" class="gallery-img w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="image" data-src="https://images.unsplash.com/photo-1500622944204-b135684e99fd" data-caption="Street scene — candid moments" />
+          <figcaption class="mt-2 text-sm text-gray-600">Street scene — Street Photography</figcaption>
+        </figure>
+      </div>
+
+      <!-- Creative Film -->
+      <h3 class="text-2xl font-semibold mb-4">Creative Film</h3>
+      <p class="mb-4">Exploring visual art through experimental angles, lighting, and storytelling — bringing imagination to motion.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+        <figure class="gallery-item" data-category="film">
+          <video class="w-full h-64 object-cover rounded-lg cursor-pointer" tabindex="0" data-type="video" data-src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" aria-label="Sample creative film"> 
+            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="mt-2 text-sm text-gray-600">Creative short film — Film</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button id="lightbox-close" class="absolute top-6 right-6 text-white text-2xl" aria-label="Close preview">✕</button>
+      <div id="lightbox-content" class="max-w-5xl mx-auto px-4">
+        <!-- content injected here -->
+      </div>
+      <p id="lightbox-caption" class="text-center text-sm text-white mt-4"></p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Services</h2>
+      <p class="text-center mb-6">Whether it’s a personal milestone or a corporate assignment, I offer professional photography and videography tailored to your vision.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Event Coverage</h3>
+          <p class="mb-2">📸 Full-day, half-day, and highlight reel options.</p>
+          <p class="font-semibold">Starting at KES 25,000</p>
+          <div class="mt-4">
+            <button class="pay-btn mt-2 px-4 py-2 bg-yellow-500 text-black rounded" data-amount="25000" data-ref="Event Coverage">Pay Deposit</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Wedding Packages</h3>
+          <p class="mb-2">💍 Story-driven coverage from engagement to reception. Custom albums and cinematic edits available.</p>
+          <p class="font-semibold">Starting at KES 60,000</p>
+          <div class="mt-4">
+            <button class="pay-btn mt-2 px-4 py-2 bg-yellow-500 text-black rounded" data-amount="60000" data-ref="Wedding Package">Pay Deposit</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Documentary Production</h3>
+          <p class="mb-2">🎞️ Concept, production, and post for NGOs, brands and social projects. Research and interview capture included.</p>
+          <p class="font-semibold">Contact for quote</p>
+          <div class="mt-4">
+            <button class="pay-btn mt-2 px-4 py-2 bg-yellow-500 text-black rounded" data-amount="0" data-ref="Documentary Production">Pay Deposit</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Creative Films & Ads</h3>
+          <p class="mb-2">🎬 Short promotional films, social ads, and branded content with full post-production.</p>
+          <p class="font-semibold">Starting at KES 40,000</p>
+          <div class="mt-4">
+            <button class="pay-btn mt-2 px-4 py-2 bg-yellow-500 text-black rounded" data-amount="40000" data-ref="Creative Films">Pay Deposit</button>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Portrait Sessions</h3>
+          <p class="mb-2">🧍🏽 Studio, outdoor lifestyle, headshots and editorial sessions.</p>
+          <p class="font-semibold">Starting at KES 8,000</p>
+          <div class="mt-4">
+            <button class="pay-btn mt-2 px-4 py-2 bg-yellow-500 text-black rounded" data-amount="8000" data-ref="Portrait Session">Pay Deposit</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <p class="italic">“Kimani captured our wedding beautifully — every moment feels alive again.”</p>
+          <p class="mt-4 font-semibold">— Sarah & Brian</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <p class="italic">“Professional, creative, and always delivers more than expected.”</p>
+          <p class="mt-4 font-semibold">— Polycom Girls Organization</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <p class="italic">“His documentary work helped us tell powerful community stories visually.”</p>
+          <p class="mt-4 font-semibold">— Spread a Smile Organization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8">Let’s Create Something Timeless</h2>
+      <p class="mb-6">Have a project, an event, or a story you’d like captured? Get in touch — I’d love to bring your vision to life.</p>
+      <div class="max-w-md mx-auto">
+        <form id="contact-form" class="space-y-4">
+          <label class="sr-only" for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required class="w-full p-3 mb-0 border rounded-lg" />
+          <!-- Honeypot field: bots will fill this, humans won't. Keep it hidden. -->
+          <div class="hidden-hp">
+            <label for="hp_contact">Leave this field empty</label>
+            <input id="hp_contact" name="hp_contact" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <label class="sr-only" for="email">Your Email</label>
+          <input id="email" name="email" type="email" placeholder="Your Email" required class="w-full p-3 mb-0 border rounded-lg" />
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required class="w-full p-3 mb-0 border rounded-lg h-32"></textarea>
+
+          <div class="flex items-center justify-center">
+            <button type="submit" class="px-6 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600">Send Message</button>
+          </div>
+          <p id="contact-feedback" class="text-sm mt-2"></p>
+        </form>
+      </div>
+      <div class="mt-6">
+        <p>📧 <a href="mailto:kimanianthony002@gmail.com" class="text-blue-600">kimanianthony002@gmail.com</a></p>
+        <p>📸 Instagram: <a href="https://instagram.com/[yourhandle]" class="text-blue-600">@[yourhandle]</a></p>
+        <p>🎥 YouTube: <a href="https://youtube.com/[yourchannel]" class="text-blue-600">[yourchannel]</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="text-sm">
+        <p>&copy; 2025 Kimani Anthonio — All Rights Reserved</p>
+        <p>Nairobi, Kenya • Available for travel</p>
+      </div>
+      <div class="mt-4 md:mt-0 text-sm">
+        <a href="#privacy" class="hover:text-teal-400 mr-4">Privacy</a>
+        <a href="#terms" class="hover:text-teal-400">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Payment Modal -->
+  <div id="pay-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg max-w-md w-full p-6">
+      <h3 class="text-xl font-semibold mb-2">Secure M-Pesa Payment</h3>
+      <p id="pay-service" class="text-sm text-gray-600 mb-4"></p>
+      <label class="block text-sm mb-1">Your phone number (MSISDN, e.g. 2547XXXXXXXX)</label>
+      <input id="mpesa-phone" type="text" class="w-full p-3 border rounded mb-3" placeholder="2547XXXXXXXX" />
+      <label class="block text-sm mb-1">Amount (KES)</label>
+      <input id="mpesa-amount" type="number" placeholder="e.g. 25000" class="w-full p-3 border rounded mb-3" />
+      <!-- Honeypot for payment modal -->
+      <div class="hidden-hp">
+        <label for="hp_pay">Leave this empty</label>
+        <input id="hp_pay" name="hp_pay" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <p id="pay-feedback" class="text-sm mb-3"></p>
+      <div class="flex justify-end space-x-3">
+        <button id="pay-cancel" class="px-4 py-2 border rounded">Cancel</button>
+        <button id="pay-submit" class="px-4 py-2 bg-yellow-500 rounded">Pay via M-Pesa</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Utility: normalize Kenyan phone numbers to 2547XXXXXXXX
+    function normalizeKenyaPhone(input) {
+      if (!input) return '';
+      let s = input.trim();
+      // remove spaces, dashes
+      s = s.replace(/[\s-]/g, '');
+      // remove leading +
+      if (s.startsWith('+')) s = s.slice(1);
+      // if starts with 0, convert 07XXXXXXXX to 2547XXXXXXXX
+      if (s.startsWith('0') && s.length === 10) {
+        return '254' + s.slice(1);
+      }
+      // if starts with 7 and length 9 -> 7XXXXXXXX -> 2547XXXXXXXX
+      if (/^7\d{8}$/.test(s)) return '254' + s;
+      // if starts with 254 and next digit is 7 -> assume correct
+      if (/^2547\d{8}$/.test(s)) return s;
+      // if starts with 07 and len 10
+      if (/^07\d{8}$/.test(s)) return '254' + s.slice(1);
+      return s; // fallback
+    }
+
+    // --- Payment UI & client logic ---
+  // NOTE: For STK Push we'll use a serverless function. When deployed to Vercel the function path
+  // is /api/mpesa. If you host elsewhere, replace this with your function URL.
+  const PAYMENT_ENDPOINT = '/api/mpesa';
+
+    const payModal = document.getElementById('pay-modal');
+    const payService = document.getElementById('pay-service');
+    const payPhone = document.getElementById('mpesa-phone');
+    const payAmount = document.getElementById('mpesa-amount');
+    const payFeedback = document.getElementById('pay-feedback');
+    const paySubmit = document.getElementById('pay-submit');
+    const payCancel = document.getElementById('pay-cancel');
+
+    function openPayModal(serviceRef, amount) {
+      payService.textContent = `${serviceRef} — deposit request`;
+      payAmount.value = amount || '';
+      payPhone.value = '';
+      payFeedback.textContent = '';
+      payModal.classList.remove('hidden');
+      payModal.style.display = 'flex';
+      payPhone.focus();
+    }
+
+    function closePayModal() {
+      payModal.classList.add('hidden');
+      payModal.style.display = '';
+    }
+
+    document.querySelectorAll('.pay-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const amount = btn.getAttribute('data-amount');
+        const ref = btn.getAttribute('data-ref');
+        openPayModal(ref, amount);
+      });
+    });
+
+    payCancel.addEventListener('click', closePayModal);
+
+    paySubmit.addEventListener('click', async () => {
+      const rawPhone = payPhone.value.trim();
+      const phone = normalizeKenyaPhone(rawPhone);
+      const amount = Number(payAmount.value);
+      if (!/^2547\d{8}$/.test(phone)) {
+        payFeedback.textContent = 'Please enter a valid Kenyan phone number in the format 2547XXXXXXXX.';
+        payFeedback.className = 'text-sm text-red-500';
+        return;
+      }
+      if (!amount || amount <= 0) {
+        payFeedback.textContent = 'Please enter a valid amount greater than 0.';
+        payFeedback.className = 'text-sm text-red-500';
+        return;
+      }
+
+      payFeedback.textContent = 'Initiating payment — you will receive an M-Pesa prompt on your phone.';
+      payFeedback.className = 'text-sm text-gray-700';
+      paySubmit.disabled = true;
+
+      try {
+        const res = await fetch(PAYMENT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, amount, ref: payService.textContent })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          payFeedback.textContent = data.message || 'Payment request sent. Complete the prompt on your phone to finish.';
+          payFeedback.className = 'text-sm text-green-600';
+        } else {
+          payFeedback.textContent = data.error || 'Payment initiation failed. Try again or contact support.';
+          payFeedback.className = 'text-sm text-red-500';
+        }
+      } catch (err) {
+        payFeedback.textContent = 'Network error — please try again.';
+        payFeedback.className = 'text-sm text-red-500';
+      } finally {
+        paySubmit.disabled = false;
+      }
+    });
+  </script>
+
+  <!-- Optional reCAPTCHA v3 (replace SITE_KEY with your key) -->
+  <!-- To enable: sign up for reCAPTCHA v3, replace SITE_KEY below and set VERIFY endpoint server-side. -->
+  <script>
+    const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY'; // replace or set to '' to disable
+    async function getRecaptchaToken(action = 'submit') {
+      if (!RECAPTCHA_SITE_KEY || RECAPTCHA_SITE_KEY === 'YOUR_RECAPTCHA_SITE_KEY') return null;
+      try {
+        // load grecaptcha if not yet loaded
+        if (!window.grecaptcha) {
+          await new Promise((resolve, reject) => {
+            const s = document.createElement('script');
+            s.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+            s.onload = resolve; s.onerror = reject; document.head.appendChild(s);
+          });
+        }
+        return await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action });
+      } catch (err) {
+        console.warn('reCAPTCHA token fetch failed', err);
+        return null;
+      }
+    }
+
+    // Update contact form handler to include reCAPTCHA and honeypot check
+    (function overrideContactHandler() {
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('contact-feedback');
+      const FORM_ENDPOINT = 'https://formspree.io/f/mldpzyey'; // keep your endpoint
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        // honeypot check
+        if (document.getElementById('hp_contact').value) {
+          feedback.textContent = 'Spam detected.';
+          feedback.className = 'text-sm text-red-500';
+          return;
+        }
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        if (!name || !email || !message) {
+          feedback.textContent = 'Please complete all fields.';
+          feedback.className = 'text-sm text-red-500';
+          return;
+        }
+        // If message contains a phone field or you later add a phone input, normalize it here
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true; const originalText = submitBtn.textContent; submitBtn.textContent = 'Sending…';
+        const token = await getRecaptchaToken('contact');
+        try {
+          const res = await fetch(FORM_ENDPOINT, {
+            method: 'POST', headers: { 'Accept': 'application/json','Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message, 'g-recaptcha-response': token })
+          });
+          if (res.ok) {
+            feedback.textContent = 'Thanks — your message was sent.'; feedback.className = 'text-sm text-green-600'; form.reset();
+          } else { let errText = 'An error occurred sending your message.'; try { const d = await res.json(); if (d && d.error) errText = d.error; } catch(_){} feedback.textContent = errText; feedback.className = 'text-sm text-red-500'; }
+        } catch (err) { feedback.textContent = 'Network error — please try again.'; feedback.className = 'text-sm text-red-500'; }
+        finally { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+      });
+    })();
+
+    // Update payment flow to include honeypot and reCAPTCHA token
+    (function overridePaymentHandler() {
+  const PAYMENT_ENDPOINT = '/api/mpesa';
+      const payModal = document.getElementById('pay-modal');
+      const payService = document.getElementById('pay-service');
+      const payPhone = document.getElementById('mpesa-phone');
+      const payAmount = document.getElementById('mpesa-amount');
+      const payFeedback = document.getElementById('pay-feedback');
+      const paySubmit = document.getElementById('pay-submit');
+      const payCancel = document.getElementById('pay-cancel');
+
+      async function paySubmitHandler() {
+        if (document.getElementById('hp_pay').value) { payFeedback.textContent = 'Spam detected.'; payFeedback.className = 'text-sm text-red-500'; return; }
+        const phone = payPhone.value.trim(); const amount = Number(payAmount.value);
+        if (!/^2547\d{8}$/.test(phone)) { payFeedback.textContent = 'Please enter a valid Kenyan phone number.'; payFeedback.className = 'text-sm text-red-500'; return; }
+        if (!amount || amount <= 0) { payFeedback.textContent = 'Please enter a valid amount.'; payFeedback.className = 'text-sm text-red-500'; return; }
+        paySubmit.disabled = true; payFeedback.textContent = 'Initiating payment…'; payFeedback.className = 'text-sm text-gray-700';
+        const token = await getRecaptchaToken('payment');
+        try {
+          const res = await fetch(PAYMENT_ENDPOINT, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify({ phone, amount, ref: payService.textContent, 'g-recaptcha-response': token }) });
+          const data = await res.json();
+          if (res.ok) { payFeedback.textContent = data.message || 'Payment request sent.'; payFeedback.className = 'text-sm text-green-600'; }
+          else { payFeedback.textContent = data.error || 'Payment initiation failed.'; payFeedback.className = 'text-sm text-red-500'; }
+        } catch (err) { payFeedback.textContent = 'Network error — please try again.'; payFeedback.className = 'text-sm text-red-500'; }
+        finally { paySubmit.disabled = false; }
+      }
+
+      // replace earlier handler binding
+      document.getElementById('pay-submit').addEventListener('click', paySubmitHandler);
+    })();
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kimani Anthonio",
+    "url": "http://example.com/",
+    "sameAs": [
+      "https://instagram.com/[yourhandle]",
+      "https://youtube.com/[yourchannel]"
+    ],
+    "jobTitle": "Photographer & Videographer",
+    "description": "Professional photographer and videographer based in Nairobi. Services: events, weddings, portraits, documentaries, and creative films."
+  }
+  </script>
+
+  <script>
+    // Navigation toggle for small screens
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('header nav');
+      if (!nav) return;
+      nav.classList.toggle('hidden');
+    });
+
+    // Gallery filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => b.classList.remove('bg-teal-500','text-white'));
+        btn.classList.add('bg-teal-500','text-white');
+        galleryItems.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all' || filter === cat) item.style.display = '';
+          else item.style.display = 'none';
+        });
+      });
+    });
+
+    // Accessible Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    function showInLightbox(type, src, caption) {
+      lightboxContent.innerHTML = '';
+      if (type === 'video') {
+        const v = document.createElement('video');
+        v.src = src;
+        v.controls = true;
+        v.autoplay = true;
+        v.className = 'mx-auto';
+        lightboxContent.appendChild(v);
+      } else {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = caption || '';
+        lightboxContent.appendChild(img);
+      }
+      lightboxCaption.textContent = caption || '';
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function hideLightbox() {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxContent.innerHTML = '';
+      lightboxCaption.textContent = '';
+      document.body.style.overflow = '';
+    }
+
+    // Open lightbox on click or keyboard (Enter)
+    document.querySelectorAll('[data-type]').forEach(el => {
+      el.addEventListener('click', () => {
+        showInLightbox(el.getAttribute('data-type'), el.getAttribute('data-src'), el.getAttribute('data-caption'));
+      });
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showInLightbox(el.getAttribute('data-type'), el.getAttribute('data-src'), el.getAttribute('data-caption'));
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', hideLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) hideLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideLightbox();
+    });
+
+    // Contact form handling - POST to Formspree
+    // TODO: Replace FORM_ENDPOINT with your Formspree endpoint (example: https://formspree.io/f/abcdefg)
+    const FORM_ENDPOINT = 'https://formspree.io/f/mldpzyey';
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('contact-feedback');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      feedback.className = '';
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      if (!name || !email || !message) {
+        feedback.textContent = 'Please complete all fields.';
+        feedback.className = 'text-sm text-red-500';
+        return;
+      }
+      // disable submit while sending
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        if (res.ok) {
+          feedback.textContent = 'Thanks — your message was sent. We will get back to you shortly.';
+          feedback.className = 'text-sm text-green-600';
+          form.reset();
+        } else {
+          // Try to read JSON error if provided
+          let errText = 'An error occurred sending your message. Please try again later.';
+          try { const data = await res.json(); if (data && data.error) errText = data.error; } catch(_) {}
+          feedback.textContent = errText;
+          feedback.className = 'text-sm text-red-500';
+        }
+      } catch (err) {
+        feedback.textContent = 'Network error — please check your connection and try again.';
+        feedback.className = 'text-sm text-red-500';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</body>
+</html>
