@@ -17,7 +17,6 @@ function ensureDataFile() {
   if (!fs.existsSync(DATA_FILE)) fs.writeFileSync(DATA_FILE, '[]', 'utf8');
 }
 
-// Removed: api/mpesa-callback.js
-// Replaced with a placeholder after user requested removal of JS files.
-module.exports = (req, res) => res.status(410).send('Removed');
+// removed
+module.exports = () => {};
     const stk = body?.Body?.stkCallback || body;

@@ -17,7 +17,7 @@ const crypto = require('crypto');
 const bodyParser = require('body-parser');
 
 const app = express();
-// Removed: express-server.js placeholder
+// removed
 module.exports = {};
 
 const PORT = process.env.PORT || 3000;
